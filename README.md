@@ -1,1 +1,1 @@
-# daybook
+# daybook [![e-mail](https://img.shields.io/badge/email-lsh000124%40gmail.com-red.svg)](mailto:lsh00124@naver.com) [![e-mail](https://img.shields.io/badge/tech-stack(click%20here)-green.svg)](https://stackshare.io/EXIDD/diary)
