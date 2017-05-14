@@ -1,0 +1,16 @@
+<table class="table" ng-controller="daybookListCtrl">
+    <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>내용</th>
+        <th>글쓴이</th>
+        <th>일시</th>
+    </tr>
+    <tr ng-repeat="daybook in daybooks">
+        <td>{{$index + 1}}</td>
+        <td>{{daybook.title}}</td>
+        <td>{{daybook.content}}</td>
+        <td>{{daybook.author}}</td>
+        <td>{{daybook.published_date | date: "yyyy.MM.dd HH:mm:ss"}}</td>
+    </tr>
+</table>
