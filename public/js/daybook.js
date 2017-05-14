@@ -20,3 +20,26 @@ app.directive('daybookList', function (){
       templateUrl: '/views/directives/daybook-list.html'
    }
 });
+
+app.directive('inputDaybook', function (){
+   var link = function(scope, element, attrs){
+
+   };
+   var controller = function ($scope, $http){
+      $scope.submit = function(){
+         var title = $('#title').val();
+         var content = $('#content').val();
+         var data = {title: title, content: content}
+         $http.post('/api/daybooks', data)
+             .success(function(res){
+                $scope.daybooks = res;
+             })
+      }
+   };
+   return {
+      restrict: 'E',
+      controller: controller,
+      link: link,
+      templateUrl: '/views/directives/input-daybook.html'
+   }
+});
