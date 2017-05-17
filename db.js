@@ -1,7 +1,7 @@
 var mongoose    = require('mongoose');
 var Schema = mongoose.Schema;
 var db = mongoose.connection;
-
+mongoose.Promise = global.Promise;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
     console.log('connect successfully');
@@ -15,5 +15,5 @@ var BookSchema = new Schema({
     'published_date': Date
 });
 
-var Book = mongoose.model('daybook', BookSchema)
+var Book = mongoose.model('daybook', BookSchema);
 module.exports = Book;

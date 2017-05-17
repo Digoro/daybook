@@ -1,13 +1,22 @@
-<div class="row">
-    <button class="btn btn-success pull-right" style="margin-right: 15px;" ng-click="submit()">등록</button>
-</div><br>
-<div class="row">
-    <div class="col-md-12">
-        <input type="text" id="title" class="form-control" placeholder="제목을 작성해주세요">
+<div id="input-datbook">
+    <div class="row">
+        <button class="btn btn-success pull-right" style="margin-right: 15px;" id="submitBtn" ng-click="submit(title, content)">등록</button>
+        <button class="btn btn-info pull-right" style="margin-right: 15px;" id="editBtn" ng-click="edit(title, content)">수정</button>
     </div>
-</div><br>
-<div class="row">
-    <div class="col-md-12">
-        <textarea class="form-control" id="content" placeholder="내용을 작성해주세요" rows="27"></textarea>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" id="title" class="form-control" placeholder="제목을 작성해주세요" ng-model="title">
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-md-12">
+            <textarea class="form-control" id="content" placeholder="내용을 작성해주세요" rows="27" ng-model="content"></textarea>
+        </div>
     </div>
 </div>
+
+<style>
+    #editBtn {
+        display: none;
+    }
+</style>
